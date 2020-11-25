@@ -2,7 +2,6 @@ const app = require('express')();
 const http = require('http').createServer(app);
 const port = process.env.PORT || 3000;
 const authorizer = require('./authorizer');
-const catApi = require('./catApi');
 
 app.get('/slack/authorization', function (req, res) {
   const code = req.params.code;
@@ -32,8 +31,8 @@ app.get('/slack/authorization', function (req, res) {
     });
 });
 
-app.post('/slack/catPlease', function (req, res) {
-  res.send(catApi());
+app.post('/doSomething', function (req, res) {
+  res.send('Hello from your Slack App template.')
 });
 
 http.listen(port, function () {
