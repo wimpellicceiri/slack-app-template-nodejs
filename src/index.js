@@ -32,7 +32,7 @@ app.get('/slack/authorization', function (req, res) {
     });
 });
 
-app.get('/slack/catPlease', function (req, res) {
+app.post('/slack/catPlease', function (req, res) {
   res.send(catApi());
 });
 
