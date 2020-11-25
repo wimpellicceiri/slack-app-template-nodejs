@@ -3,8 +3,8 @@ const axios = require('axios');
 module.exports = (code) => {
   console.log('Authorizer was called');
 
-  const clientId = process.env.SLACK_CLIENT_ID;
-  const clientSecret = process.env.SLACK_CLIENT_SECRET
+  const clientId = '473066604338.1518457870594';
+  const clientSecret = '4461f6820c17bdfca0fc3b8ca687a6e1';
 
   const oauthURL = 'https://slack.com/api/oauth.access?' +
     'client_id=' + clientId + '&' +
